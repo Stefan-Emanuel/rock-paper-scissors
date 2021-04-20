@@ -182,8 +182,8 @@ body{
 @media (min-width:1800px){
     .choices{
         position:absolute;
-        left: 750px;
-        bottom: 450px;
+        left: 700px;
+        bottom: 400px;
         margin: 50px 0;
     
     }
