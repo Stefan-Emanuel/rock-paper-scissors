@@ -1,5 +1,7 @@
+//Game Variables
 let userScore=0;
 let computerScore=0; 
+//DOM Elements
 const userScore_span=document.getElementById("user-score");
 const computerScore_span=document.getElementById("computer-score");
 const scoreBoard_div=document.querySelector(".score-board");
@@ -8,19 +10,21 @@ const rock_div=document.getElementById("r");
 const paper_div=document.getElementById("p");
 const scissors_div=document.getElementById("s");
  
+//Computer pick-function
 function getComputerChoice() { 
  const choices=["r", "p", "s"];
  const  randomNumber= Math.floor(Math.random()* 3);
  return choices[randomNumber];
 }
 
+//function to convert r,s,p into words in my own language(rock,paper,scissors)
 function convertToWord(letter){
   if (letter==="r") return "Piatra";
   if (letter==="p") return "Hartie";
   if (letter==="s") return "Foarfeca";
 }
 
-
+//Play: win function
 function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
@@ -39,6 +43,7 @@ function win(userChoice, computerChoice) {
   
 }
 
+//Play: lose function
 function lose(userChoice, computerChoice){
   computerScore++
   userScore_span.innerHTML = userScore;
@@ -55,13 +60,14 @@ function lose(userChoice, computerChoice){
       computerScore=0;
   }
 }
-
+//Play: tie function
 function tie(userChoice,computerChoice){
   result_p.innerHTML=` ${convertToWord(userChoice)} este egala cu ${convertToWord(computerChoice)}. Remiza!`
   document.getElementById(userChoice).classList.add("gray-glow");
   setTimeout(function(){document.getElementById(userChoice).classList.remove("gray-glow")}, 300)
 }
 
+//game function
 function game(userChoice){
     const computerChoice=getComputerChoice();
    switch(userChoice + computerChoice) {
@@ -82,7 +88,7 @@ function game(userChoice){
      break;
      }
    }
-
+// main function where i added some addEventListeners and by clicking each of them picking a certain element(rock, paper, scissors)
 function main() {
     rock_div.addEventListener("click", function(){
     game("r");
