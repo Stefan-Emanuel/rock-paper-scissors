@@ -103,5 +103,78 @@ header{
 
 body{
     background-image: url(unnamed.jpg);
+    width: 100%;
     
+}
+
+
+
+
+@media(max-width:300px){
+    .result {
+        font-size: 14px;
+        color: white;
+    }
+    .choices{
+        position:absolute;
+        left: 50px;
+        bottom: 80px;
+        margin: 50px 0;
+    
+    }
+    .choice{
+        display: inline-block;
+        transform: scale(0.1);
+        border: 3px solid white;
+        border-radius: 50%;
+        margin: 0px 0px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+}
+
+@media (max-width:500px) {
+    .choices{
+        position:absolute;
+        left: 80px;
+        bottom: 250px;
+        margin: 50px 0;
+    
+    }
+    .choice{
+        display: inline-block;
+        transform: scale(1);
+        border: 3px solid white;
+        border-radius: 50%;
+        margin: 0px 2px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+    .result {
+        font-size: 20px;
+        color: white;
+    }
+}
+
+@media (max-width: 1000px) {
+    .choices{
+        position:absolute;
+        left: 200px;
+        bottom: 500px;
+        margin: 50px 0;
+    
+    }
+    .choice{
+        display: inline-block;
+        transform: scale(1);
+        border: 3px solid white;
+        border-radius: 50%;
+        margin: 0px 3px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+    .result {
+        font-size: 18px;
+        color: white;
+    }
 }
