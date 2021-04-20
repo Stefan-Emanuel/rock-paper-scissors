@@ -155,3 +155,49 @@ body{
         color: white;
     }
 }
+
+@media (min-width:1500px) and (max-width:1800px){
+    .choices{
+        position:absolute;
+        left: 700px;
+        bottom: 350px;
+        margin: 50px 0;
+    
+    }
+    .choice{
+        display: inline-block;
+        transform: scale(1.5);
+        border: 3px solid white;
+        border-radius: 50%;
+        margin: 0px 25px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+    .result {
+        font-size: 30px;
+        color: white;
+    }
+}
+
+@media (min-width:1800px){
+    .choices{
+        position:absolute;
+        left: 750px;
+        bottom: 450px;
+        margin: 50px 0;
+    
+    }
+    .choice{
+        display: inline-block;
+        transform: scale(1.5);
+        border: 3px solid white;
+        border-radius: 50%;
+        margin: 0px 25px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+    .result {
+        font-size: 40px;
+        color: white;
+    }
+}
